@@ -6,6 +6,9 @@ import { nextSpellFrame, dealDamage } from '../actions';
 function* callSpellAnimation(e) {
   for (let frame = 0; frame <= 4; frame++) {
     yield delay(150);
+    if (frame === 4) {
+      yield delay(250);
+    }
     yield put(nextSpellFrame);
   }
   yield put(dealDamage(e.payload.damageType, e.payload.damage));
