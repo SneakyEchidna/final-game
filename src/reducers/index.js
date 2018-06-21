@@ -1,9 +1,12 @@
-const initialState = {
-  message: 'Welcome',
-};
+import { combineReducers } from 'redux';
+import playerReducer from './playerReducer';
+import enemyReducer from './enemyReducer';
+import gameReducer from './gameReducer';
 
-function reducer(state = initialState) {
-  return state;
-}
+const reducer = combineReducers({
+  player: playerReducer,
+  enemy: enemyReducer,
+  game: gameReducer,
+});
 
 export default reducer;

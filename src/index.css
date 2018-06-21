@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'pixel';
+  src: url('./assets/pcsenior.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'pixel';
+  font-size: 14px;
 }

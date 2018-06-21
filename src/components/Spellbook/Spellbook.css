@@ -1,0 +1,29 @@
+.spellBook {
+  position: fixed;
+  top: 30px;
+  left: 130px;
+  user-select: none;
+  background-color: #0c3fc3;
+  color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 20px;
+  width: 205px;
+}
+.spellBook ul {
+  position: relative;
+  list-style-type: none;
+}
+.spellBook li:hover::before {
+  content: '';
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  float: left;
+  left: -30px;
+  margin: 0 0px 0 0;
+  background: url('../../assets/hand.png') no-repeat;
+  background-size: 20px;
+}
