@@ -1,4 +1,13 @@
-import { TAKE_DAMAGE, GAIN_XP, TOGGLE_SPELLBOOK, DEAL_DAMAGE, OPEN_TRIAL } from './actionTypes';
+import {
+  TAKE_DAMAGE,
+  GAIN_XP,
+  TOGGLE_SPELLBOOK,
+  DEAL_DAMAGE,
+  OPEN_TRIAL,
+  NEXT_SPELL_FRAME,
+  CAST_SPELL,
+  READY_SPELL,
+} from './actionTypes';
 
 export const takeDamage = damage => ({
   type: TAKE_DAMAGE,
@@ -16,10 +25,24 @@ export const toggleSpellbook = () => ({
 
 export const dealDamage = (damageType, damage) => ({
   type: DEAL_DAMAGE,
-  payload: { damage, damageType },
+  payload: { damageType, damage },
 });
 
-export const openTrial = (damageType, trialType) => ({
+export const openTrial = trialType => ({
   type: OPEN_TRIAL,
-  payload: { damageType, trialType },
+  payload: { trialType },
+});
+
+export const nextSpellFrame = {
+  type: NEXT_SPELL_FRAME,
+};
+
+export const castSpell = (damageType, damage) => ({
+  type: CAST_SPELL,
+  payload: { damageType, damage },
+});
+
+export const readySpell = damageType => ({
+  type: READY_SPELL,
+  payload: { damageType },
 });

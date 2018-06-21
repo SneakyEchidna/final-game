@@ -14,7 +14,7 @@ export class Math extends Component {
   }
   click() {
     if (this.state.answer === '4') {
-      this.props.dealDamage(this.props.damageType, 5);
+      this.props.castSpell(this.props.damageType, 5);
       this.props.openTrial(null, null);
     }
   }

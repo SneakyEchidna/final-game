@@ -16,12 +16,23 @@ export default class Canvas extends Component {
   }
 
   componentDidUpdate() {
-    updateCanvas(this.ctx, this.props.playerHp, this.props.enemyHp);
+    updateCanvas(
+      this.ctx,
+      this.props.playerHp,
+      this.props.enemyHp,
+      this.props.heroAction,
+      this.props.damageType,
+      this.props.spellFrame,
+      this.loadedImages,
+    );
   }
   loadResources() {
     this.sprites = [
       { name: 'player', src: `${process.env.PUBLIC_URL}/player.png` },
       { name: 'background', src: `${process.env.PUBLIC_URL}/backgrounds.png` },
+      { name: 'ice', src: `${process.env.PUBLIC_URL}/ice.png` },
+      { name: 'fire', src: `${process.env.PUBLIC_URL}/fire.png` },
+      { name: 'thunder', src: `${process.env.PUBLIC_URL}/thunder.png` },
     ];
     this.loadedImages = this.sprites.reduce((acc, sprite) => {
       const img = new Image();
