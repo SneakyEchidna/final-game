@@ -20,7 +20,7 @@ export class Spellbook extends Component {
           <li name="ice" trial="Math">
             Ice
           </li>
-          <li name="ice" trial="Math">
+          <li name="thunder" trial="Math">
             Thunder
           </li>
           <li name="ice" trial="Math">

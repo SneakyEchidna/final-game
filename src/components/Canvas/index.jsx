@@ -32,6 +32,7 @@ export default class Canvas extends Component {
       { name: 'background', src: `${process.env.PUBLIC_URL}/backgrounds.png` },
       { name: 'ice', src: `${process.env.PUBLIC_URL}/ice.png` },
       { name: 'fire', src: `${process.env.PUBLIC_URL}/fire.png` },
+      { name: 'thunder', src: `${process.env.PUBLIC_URL}/thunder.png` },
     ];
     this.loadedImages = this.sprites.reduce((acc, sprite) => {
       const img = new Image();
