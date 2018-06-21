@@ -1,9 +1,16 @@
-import { TOGGLE_SPELLBOOK, OPEN_TRIAL } from '../actions/actionTypes';
+import {
+  TOGGLE_SPELLBOOK,
+  OPEN_TRIAL,
+  NEXT_SPELL_FRAME,
+  READY_SPELL,
+} from '../actions/actionTypes';
 
 const initialState = {
   showSpellbook: false,
   trialType: null,
   damageType: null,
+  animateSpell: false,
+  spellFrame: null,
 };
 
 const gameReducer = (state = initialState, action) => {
@@ -14,9 +21,20 @@ const gameReducer = (state = initialState, action) => {
       return {
         ...state,
         trialType: action.payload.trialType,
-        elementType: action.payload.damageType,
       };
-
+    case READY_SPELL:
+      return {
+        ...state,
+        damageType: action.payload.damageType,
+      };
+    case NEXT_SPELL_FRAME:
+      if (state.spellFrame === null) {
+        return { ...state, spellFrame: 0 };
+      }
+      if (state.spellFrame === 3) {
+        return { ...state, spellFrame: null };
+      }
+      return { ...state, spellFrame: state.spellFrame + 1 };
     default:
       return state;
   }

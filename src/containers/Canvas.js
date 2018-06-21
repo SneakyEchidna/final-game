@@ -9,6 +9,9 @@ const mapDispatchToProps = dispatch => ({
 const dispatchStateToProps = state => ({
   playerHp: state.player.hp,
   enemyHp: state.enemy.hp,
+  heroAction: state.player.action,
+  damageType: state.game.damageType,
+  spellFrame: state.game.spellFrame,
 });
 
 const CanvasContainer = connect(

@@ -5,11 +5,11 @@ export default function drawPlayer(ctx) {
   const srcH = 79;
   const destX = 60;
   const destY = 130;
-  const destH = 48;
-  const destW = 237;
+  const destW = 32;
+  const destH = 158;
 
   const player = new Image();
-  ctx.imageSmoothingEnabled = false;
+  // ctx.imageSmoothingEnabled = false;
   player.src = `${process.env.PUBLIC_URL}/player.png`;
-  ctx.drawImage(player, srcX, srcY, srcW, srcH, destX, destY, destH, destW);
+  ctx.drawImage(player, srcX, srcY, srcW, srcH, destX, destY, destW, destH);
 }

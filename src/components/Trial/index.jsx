@@ -6,7 +6,7 @@ export class Trial extends Component {
   renderTrial() {
     switch (this.props.trialType) {
       case 'Math':
-        return <Math dealDamage={this.props.dealDamage} openTrial={this.props.openTrial} />;
+        return <Math castSpell={this.props.castSpell} openTrial={this.props.openTrial} />;
       default:
         return '';
     }

@@ -1,4 +1,4 @@
-export default function drawEnemy(ctx) {
+export default function drawEnemy(ctx, damageType, animateSpell) {
   const destX = 400;
   const destY = 130;
   const destH = 45;
