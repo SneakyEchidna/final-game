@@ -12,7 +12,7 @@ export default class Canvas extends Component {
   componentDidMount() {
     this.loadResources();
     this.ctx = this.canvas.current.getContext('2d');
-    drawCanvas(this.ctx);
+    drawCanvas(this.ctx, this.loadedImages, this.props.background);
   }
 
   componentDidUpdate() {

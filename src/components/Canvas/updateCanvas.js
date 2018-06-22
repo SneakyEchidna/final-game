@@ -16,12 +16,8 @@ function updateCanvas(
   backgroundCoordinates,
 ) {
   ctx.font = '40px pixel';
-  const player = new Image();
-  const background = new Image();
-  player.src = `${process.env.PUBLIC_URL}/player.png`;
-  background.src = `${process.env.PUBLIC_URL}/backgrounds.png`;
+  ctx.imageSmoothingEnabled = false;
 
-  ctx.drawImage(background, 5, 0, 255, 140, 0, 0, 520, 270);
   drawBackground(ctx, sprites, backgroundCoordinates);
   drawPlayer(ctx, heroAction);
   drawPlayerHp(ctx, playerHp);
