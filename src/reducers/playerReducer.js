@@ -8,8 +8,7 @@ const initialState = {
 const playerReducer = (state = initialState, action) => {
   switch (action.type) {
     case TAKE_DAMAGE:
-      const newHp = state.hp - action.payload;
-      return { ...state, hp: newHp };
+      return { ...state, hp: state.hp - action.payload };
     case READY_SPELL:
       return { ...state, action: 'ready' };
     case CAST_SPELL: {
