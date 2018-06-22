@@ -12,7 +12,7 @@ export default class Canvas extends Component {
   componentDidMount() {
     this.loadResources();
     this.ctx = this.canvas.current.getContext('2d');
-    drawCanvas(this.ctx, this.loadedImages, this.props.background);
+    drawCanvas(this.ctx, this.loadedImages, this.props.background, this.props.heroAction);
   }
 
   componentDidUpdate() {
@@ -49,7 +49,7 @@ export default class Canvas extends Component {
     return (
       <canvas
         ref={this.canvas}
-        width={520}
+        width={510}
         height={270}
         style={{ display: 'block' }}
         onClick={() => this.clickHandler()}

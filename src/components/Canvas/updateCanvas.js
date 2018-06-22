@@ -19,9 +19,9 @@ function updateCanvas(
   ctx.imageSmoothingEnabled = false;
 
   drawBackground(ctx, sprites, backgroundCoordinates);
-  drawPlayer(ctx, heroAction);
+  drawPlayer(ctx, heroAction, sprites);
   drawPlayerHp(ctx, playerHp);
-  drawEnemy(ctx);
+  drawEnemy(ctx, sprites);
   drawSpell(ctx, damageType, spellFrame, sprites);
   drawEnemyHp(ctx, enemyHp);
 }
