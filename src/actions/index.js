@@ -8,6 +8,7 @@ import {
   CAST_SPELL,
   READY_SPELL,
   SET_BACKGROUND,
+  SET_PLAYER_ACTION,
 } from './actionTypes';
 
 export const takeDamage = damage => ({
@@ -51,4 +52,9 @@ export const readySpell = damageType => ({
 export const setBackground = (row, col) => ({
   type: SET_BACKGROUND,
   payload: { row, col },
+});
+
+export const setPlayerAction = action => ({
+  type: SET_PLAYER_ACTION,
+  payload: action,
 });

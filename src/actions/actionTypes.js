@@ -7,3 +7,4 @@ export const NEXT_SPELL_FRAME = 'NEXT_SPELL_FRAME';
 export const CAST_SPELL = 'CAST_SPELL';
 export const READY_SPELL = 'READY_SPELL';
 export const SET_BACKGROUND = 'SET_BACKGROUND';
+export const SET_PLAYER_ACTION = 'SET_PLAYER_ACTION';
