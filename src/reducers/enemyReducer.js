@@ -7,8 +7,7 @@ const initialState = {
 const enemyReducer = (state = initialState, action) => {
   switch (action.type) {
     case DEAL_DAMAGE:
-      const newHp = state.hp - action.payload.damage;
-      return { ...state, hp: newHp };
+      return { ...state, hp: state.hp - action.payload.damage };
     default:
       return state;
   }

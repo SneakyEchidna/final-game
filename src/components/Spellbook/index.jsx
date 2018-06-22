@@ -24,12 +24,6 @@ export class Spellbook extends Component {
             Thunder
           </li>
           <li name="ice" trial="Math">
-            Water
-          </li>
-          <li name="ice" trial="Math">
-            Quake
-          </li>
-          <li name="ice" trial="Math">
             Cure
           </li>
         </ul>
