@@ -7,6 +7,7 @@ import {
   NEXT_SPELL_FRAME,
   CAST_SPELL,
   READY_SPELL,
+  SET_BACKGROUND,
 } from './actionTypes';
 
 export const takeDamage = damage => ({
@@ -45,4 +46,9 @@ export const castSpell = (damageType, damage) => ({
 export const readySpell = damageType => ({
   type: READY_SPELL,
   payload: { damageType },
+});
+
+export const setBackground = (row, col) => ({
+  type: SET_BACKGROUND,
+  payload: { row, col },
 });

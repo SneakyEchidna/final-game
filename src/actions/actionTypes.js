@@ -6,3 +6,4 @@ export const OPEN_TRIAL = 'OPEN_TRIAL';
 export const NEXT_SPELL_FRAME = 'NEXT_SPELL_FRAME';
 export const CAST_SPELL = 'CAST_SPELL';
 export const READY_SPELL = 'READY_SPELL';
+export const SET_BACKGROUND = 'SET_BACKGROUND';

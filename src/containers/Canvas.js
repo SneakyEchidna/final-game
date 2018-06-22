@@ -12,6 +12,7 @@ const dispatchStateToProps = state => ({
   heroAction: state.player.action,
   damageType: state.game.damageType,
   spellFrame: state.game.spellFrame,
+  background: state.game.background,
 });
 
 const CanvasContainer = connect(

@@ -24,6 +24,7 @@ export default class Canvas extends Component {
       this.props.damageType,
       this.props.spellFrame,
       this.loadedImages,
+      this.props.background,
     );
   }
   loadResources() {
@@ -49,7 +50,7 @@ export default class Canvas extends Component {
       <canvas
         ref={this.canvas}
         width={520}
-        height={240}
+        height={270}
         style={{ display: 'block' }}
         onClick={() => this.clickHandler()}
       />

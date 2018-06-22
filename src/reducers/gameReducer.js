@@ -3,6 +3,7 @@ import {
   OPEN_TRIAL,
   NEXT_SPELL_FRAME,
   READY_SPELL,
+  SET_BACKGROUND,
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -11,6 +12,7 @@ const initialState = {
   damageType: null,
   animateSpell: false,
   spellFrame: null,
+  background: { row: 0, col: 0 },
 };
 
 const gameReducer = (state = initialState, action) => {
@@ -35,6 +37,8 @@ const gameReducer = (state = initialState, action) => {
         return { ...state, spellFrame: null };
       }
       return { ...state, spellFrame: state.spellFrame + 1 };
+    case SET_BACKGROUND:
+      return { ...state, background: { row: action.payload.row, col: action.payload.col } };
     default:
       return state;
   }
