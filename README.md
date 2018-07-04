@@ -1,1 +1,1 @@
-Game project for rsschool
+Turn based quiz game.
